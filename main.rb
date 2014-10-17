@@ -4,8 +4,9 @@ req = Net::HTTP::Get.new(url.to_s)
 res = Net::HTTP.start(url.host, url.port) {|http|
   http.request(req)
 }
+
 puts res.body
-if (res.body == "down")
+if (res.body == "down" || res.body.casecmp(Socket.gethostname).zero?)
   
   module OS
   def OS.windows?
