@@ -1,5 +1,4 @@
-shutdown
-====
+# shutdown
 
 A simple script to shutdown all your devices
 
